@@ -37,12 +37,15 @@ def calculator(list_of_nums):
             res = list_of_nums[0] * list_of_nums[1]
             break
         elif user_op == "/" in operators:
-            res = list_of_nums[0] / list_of_nums[1]
-        
-            break
+                if list_of_nums[1] == 0:
+                    print("Can't divide by zero")
+                    break
+                else:
+                    res = list_of_nums[0] / list_of_nums[1]
+                    break
         else:
             print("Invalid operator, please choose from these operators (-, +, *, /)")
-    return res        
+        return res        
     
 if __name__ == "__main__":
     list_of_nums = numbers()
