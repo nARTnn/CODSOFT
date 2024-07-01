@@ -1,5 +1,4 @@
 import tkinter as tk
-# import calculator
 from calculator import add_to_calculate, clear, calculation
 
 ##creating the window for gui
@@ -67,11 +66,9 @@ def runGUI():
     bt_divide = tk.Button(root, text="/", command=lambda: add_to_calculate("/", text_res), width=5, font=("Arial", 12))
     bt_divide.grid(row=5, column=5)
 
-    # bt_equal = tk.Button(root, text="=", command=calculation: add_to_calculate("=", text_res), width=5, font=("Arial", 12))
-    bt_equal = tk.Button(root, text="=", command=lambda: calculation(text_res), width=5, font=("Arial", 12))
+    bt_equal = tk.Button(root, text="=", command=lambda: calculation("=",text_res), width=7, font=("Arial", 12))
     bt_equal.grid(row=6, column=3)
     
     root.mainloop()
-    
 
 runGUI()
