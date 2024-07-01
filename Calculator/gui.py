@@ -56,20 +56,19 @@ def runGUI():
     bt_decimal.grid(row=6, column=2)
 
     bt_plus = tk.Button(root, text="+", command=lambda: add_to_calculate("+", text_res), width=5, font=("Arial", 12))
-    bt_plus.grid(row=2, column=5)
+    bt_plus.grid(row=2, column=4)
 
     bt_minus = tk.Button(root, text="-", command=lambda: add_to_calculate("-", text_res), width=5, font=("Arial", 12))
-    bt_minus.grid(row=3, column=5)
+    bt_minus.grid(row=3, column=4)
 
     bt_multiply = tk.Button(root, text="*", command=lambda: add_to_calculate("*", text_res), width=5, font=("Arial", 12))
-    bt_multiply.grid(row=4, column=5)
+    bt_multiply.grid(row=4, column=4)
 
     bt_divide = tk.Button(root, text="/", command=lambda: add_to_calculate("/", text_res), width=5, font=("Arial", 12))
-    bt_divide.grid(row=5, column=5)
+    bt_divide.grid(row=6, column=3)
 
-    # bt_equal = tk.Button(root, text="=", command=calculation: add_to_calculate("=", text_res), width=5, font=("Arial", 12))
-    bt_equal = tk.Button(root, text="=", command=lambda: calculation(text_res), width=5, font=("Arial", 12))
-    bt_equal.grid(row=6, column=3)
+    bt_equal = tk.Button(root, text="=", command=lambda: calculation(text_res), height=3,width= 5, font=("Arial", 12))
+    bt_equal.grid(row=5, column=4, rowspan=2)
     
     root.mainloop()
     
